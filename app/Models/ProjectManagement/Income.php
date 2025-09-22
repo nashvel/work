@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Models\ProjectManagement;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+use App\Models\User;
+
+class Income extends Model
+{
+    protected $table = 't_project_incomes';
+    protected $fillable = [
+        'project_id',
+        'title',
+        'description',
+        'amount',
+        'source',
+        'income_date',
+        'status',
+        'created_by',
+        'notes'
+    ];
+
+    protected $casts = [
+        'amount' => 'decimal:2',
+        'income_date' => 'date'
+    ];
+
+    public function project(): BelongsTo
+    {
+        return $this->belongsTo(Project::class);
+    }
+
+    public function creator(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
+}

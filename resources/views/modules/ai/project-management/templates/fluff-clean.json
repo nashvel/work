@@ -1,0 +1,45 @@
+{
+    "id": "fluff-clean",
+    "name": "Fluff Clean",
+    "icon": "🌟",
+    "category": "Cleaning Services",
+    "description": "Premium finishing phase with decorative touches and luxury-level detailing",
+    "template": {
+        "title": "Fluff Clean - Premium Finishing & Luxury Detailing",
+        "description": "Final luxury phase focusing on decorative touches, premium finishes, and creating an exceptional presentation.",
+        "budget": 8000,
+        "duration_days": 6,
+        "tasks": [
+            {
+                "name": "Decorative Element Cleaning",
+                "est_days": 1,
+                "dependsOn": [],
+                "notes": "Clean artwork, decorative items, plants, and display pieces with special care"
+            },
+            {
+                "name": "Premium Surface Treatments",
+                "est_days": 2,
+                "dependsOn": ["Decorative Element Cleaning"],
+                "notes": "Apply premium polishes, leather conditioning, wood treatments, and specialty finishes"
+            },
+            {
+                "name": "Scent & Ambiance Enhancement",
+                "est_days": 1,
+                "dependsOn": ["Premium Surface Treatments"],
+                "notes": "Apply air fresheners, essential oils, and create pleasant ambiance"
+            },
+            {
+                "name": "Final Styling & Arrangement",
+                "est_days": 1,
+                "dependsOn": ["Scent & Ambiance Enhancement"],
+                "notes": "Arrange furniture, straighten items, create visually appealing spaces"
+            },
+            {
+                "name": "Luxury Touch-ups & Details",
+                "est_days": 1,
+                "dependsOn": ["Final Styling & Arrangement"],
+                "notes": "Final luxury touches, ribbon placement, welcome materials, and premium presentation"
+            }
+        ]
+    }
+}

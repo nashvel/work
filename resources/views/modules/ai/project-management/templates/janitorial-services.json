@@ -1,0 +1,81 @@
+{
+    "id": "janitorial-services",
+    "name": "Janitorial Services",
+    "icon": "🧹",
+    "category": "Cleaning & Maintenance",
+    "description": "Commercial janitorial and cleaning services project",
+    "template": {
+        "title": "Commercial Janitorial Services Project",
+        "description": "Comprehensive janitorial services including floor care, window cleaning, restroom maintenance, and general office cleaning for commercial facilities.",
+        "budget": 25000,
+        "duration_days": 30,
+        "tasks": [
+            {
+                "name": "Site Assessment & Planning",
+                "est_days": 2,
+                "dependsOn": [],
+                "notes": "Initial walkthrough, assess cleaning requirements, identify high-traffic areas"
+            },
+            {
+                "name": "Equipment & Supply Procurement",
+                "est_days": 3,
+                "dependsOn": ["Site Assessment & Planning"],
+                "notes": "Purchase cleaning chemicals, equipment, uniforms, and safety gear"
+            },
+            {
+                "name": "Staff Training & Orientation",
+                "est_days": 2,
+                "dependsOn": ["Equipment & Supply Procurement"],
+                "notes": "Train staff on safety protocols, cleaning procedures, and customer service"
+            },
+            {
+                "name": "Floor Stripping & Waxing - Lobby",
+                "est_days": 2,
+                "dependsOn": ["Staff Training & Orientation"],
+                "notes": "Strip old wax, deep clean, apply new base coat and finish coats"
+            },
+            {
+                "name": "Floor Stripping & Waxing - Offices",
+                "est_days": 3,
+                "dependsOn": ["Floor Stripping & Waxing - Lobby"],
+                "notes": "Office areas, conference rooms, and common spaces"
+            },
+            {
+                "name": "Carpet Deep Cleaning",
+                "est_days": 2,
+                "dependsOn": ["Staff Training & Orientation"],
+                "notes": "Hot water extraction, stain treatment, deodorizing"
+            },
+            {
+                "name": "Window Cleaning - Interior",
+                "est_days": 2,
+                "dependsOn": ["Staff Training & Orientation"],
+                "notes": "All interior windows, glass partitions, and mirrors"
+            },
+            {
+                "name": "Window Cleaning - Exterior",
+                "est_days": 2,
+                "dependsOn": ["Window Cleaning - Interior"],
+                "notes": "Ground level and accessible exterior windows"
+            },
+            {
+                "name": "Restroom Deep Cleaning & Sanitization",
+                "est_days": 1,
+                "dependsOn": ["Staff Training & Orientation"],
+                "notes": "Disinfection, tile grout cleaning, fixture polishing"
+            },
+            {
+                "name": "Daily Cleaning Routine Setup",
+                "est_days": 5,
+                "dependsOn": ["Floor Stripping & Waxing - Offices", "Carpet Deep Cleaning", "Restroom Deep Cleaning & Sanitization"],
+                "notes": "Establish daily cleaning schedules and quality standards"
+            },
+            {
+                "name": "Quality Inspection & Client Walkthrough",
+                "est_days": 1,
+                "dependsOn": ["Daily Cleaning Routine Setup", "Window Cleaning - Exterior"],
+                "notes": "Final inspection with client, address any concerns, handover documentation"
+            }
+        ]
+    }
+}

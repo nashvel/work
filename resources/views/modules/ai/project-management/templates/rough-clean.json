@@ -1,0 +1,63 @@
+{
+    "id": "rough-clean",
+    "name": "Rough Clean",
+    "icon": "🧽",
+    "category": "Cleaning Services",
+    "description": "Initial heavy-duty cleaning phase to remove major dirt, debris, and buildup",
+    "template": {
+        "title": "Rough Clean - Initial Deep Cleaning Phase",
+        "description": "First phase of comprehensive cleaning focusing on removing heavy dirt, debris, and major buildup from all surfaces and areas.",
+        "budget": 15000,
+        "duration_days": 14,
+        "tasks": [
+            {
+                "name": "Site Assessment & Preparation",
+                "est_days": 1,
+                "dependsOn": [],
+                "notes": "Initial walkthrough, identify problem areas, prepare equipment and supplies"
+            },
+            {
+                "name": "Debris Removal & Decluttering",
+                "est_days": 2,
+                "dependsOn": ["Site Assessment & Preparation"],
+                "notes": "Remove large debris, unwanted items, and clutter from all areas"
+            },
+            {
+                "name": "Heavy Dust & Cobweb Removal",
+                "est_days": 2,
+                "dependsOn": ["Debris Removal & Decluttering"],
+                "notes": "Remove accumulated dust from high surfaces, ceiling fans, light fixtures, and corners"
+            },
+            {
+                "name": "Floor Stripping & Initial Cleaning",
+                "est_days": 3,
+                "dependsOn": ["Heavy Dust & Cobweb Removal"],
+                "notes": "Strip old wax/finish, remove ground-in dirt, initial floor cleaning"
+            },
+            {
+                "name": "Wall & Surface Scrubbing",
+                "est_days": 2,
+                "dependsOn": ["Heavy Dust & Cobweb Removal"],
+                "notes": "Scrub walls, baseboards, door frames, and other surfaces to remove buildup"
+            },
+            {
+                "name": "Bathroom Deep Scrub",
+                "est_days": 2,
+                "dependsOn": ["Wall & Surface Scrubbing"],
+                "notes": "Heavy-duty cleaning of toilets, showers, sinks, and tile grout"
+            },
+            {
+                "name": "Kitchen/Break Room Degreasing",
+                "est_days": 1,
+                "dependsOn": ["Wall & Surface Scrubbing"],
+                "notes": "Remove grease buildup from appliances, cabinets, and surfaces"
+            },
+            {
+                "name": "Window Frame & Sill Cleaning",
+                "est_days": 1,
+                "dependsOn": ["Wall & Surface Scrubbing"],
+                "notes": "Clean window frames, sills, and tracks of accumulated dirt"
+            }
+        ]
+    }
+}

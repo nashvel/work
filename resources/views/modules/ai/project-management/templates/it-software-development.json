@@ -1,0 +1,99 @@
+{
+    "id": "it-software-development",
+    "name": "IT Software Development",
+    "icon": "💻",
+    "category": "Technology",
+    "description": "Complete software application development project",
+    "template": {
+        "title": "Software Application Development Project",
+        "description": "Full-stack web application development including requirements analysis, design, development, testing, and deployment.",
+        "budget": 75000,
+        "duration_days": 120,
+        "tasks": [
+            {
+                "name": "Requirements Gathering & Analysis",
+                "est_days": 10,
+                "dependsOn": [],
+                "notes": "Meet with stakeholders, document requirements, create user stories"
+            },
+            {
+                "name": "System Design & Architecture",
+                "est_days": 12,
+                "dependsOn": ["Requirements Gathering & Analysis"],
+                "notes": "Design database schema, API architecture, system components"
+            },
+            {
+                "name": "UI/UX Design & Wireframes",
+                "est_days": 15,
+                "dependsOn": ["Requirements Gathering & Analysis"],
+                "notes": "Create wireframes, mockups, user interface designs"
+            },
+            {
+                "name": "Development Environment Setup",
+                "est_days": 5,
+                "dependsOn": ["System Design & Architecture"],
+                "notes": "Configure servers, databases, development tools, CI/CD pipeline"
+            },
+            {
+                "name": "Backend API Development",
+                "est_days": 25,
+                "dependsOn": ["Development Environment Setup"],
+                "notes": "Develop REST APIs, business logic, database integration"
+            },
+            {
+                "name": "Frontend Development",
+                "est_days": 30,
+                "dependsOn": ["UI/UX Design & Wireframes", "Backend API Development"],
+                "notes": "Build user interface, implement responsive design, integrate APIs"
+            },
+            {
+                "name": "Database Implementation",
+                "est_days": 8,
+                "dependsOn": ["Development Environment Setup"],
+                "notes": "Create database tables, indexes, stored procedures, data migration"
+            },
+            {
+                "name": "Unit Testing",
+                "est_days": 10,
+                "dependsOn": ["Backend API Development"],
+                "notes": "Write and execute unit tests for all components"
+            },
+            {
+                "name": "Integration Testing",
+                "est_days": 8,
+                "dependsOn": ["Frontend Development", "Unit Testing"],
+                "notes": "Test API integrations, end-to-end workflows, cross-browser testing"
+            },
+            {
+                "name": "Security Implementation",
+                "est_days": 7,
+                "dependsOn": ["Integration Testing"],
+                "notes": "Implement authentication, authorization, data encryption, security auditing"
+            },
+            {
+                "name": "Performance Optimization",
+                "est_days": 5,
+                "dependsOn": ["Security Implementation"],
+                "notes": "Code optimization, database tuning, caching implementation"
+            },
+            {
+                "name": "User Acceptance Testing",
+                "est_days": 10,
+                "dependsOn": ["Performance Optimization"],
+                "notes": "End-user testing, feedback collection, bug fixes"
+            },
+            {
+                "name": "Documentation & Training",
+                "est_days": 8,
+                "dependsOn": ["User Acceptance Testing"],
+                "notes": "Create user manuals, technical documentation, conduct training sessions"
+            },
+            {
+                "name": "Deployment & Go-Live",
+                "est_days": 5,
+                "dependsOn": ["Documentation & Training"],
+                "notes": "Production deployment, monitoring setup, post-launch support"
+            }
+        ]
+    }
+}

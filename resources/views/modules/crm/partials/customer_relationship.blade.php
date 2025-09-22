@@ -1,0 +1,101 @@
+@include('pages.actions.table-mod')
+
+<div class="table-responsive-x">
+    <table id="clientTable"
+        class="table wrap table-sm min-w-full !border border-defaultborder dark:border-defaultborder/10"
+        style="min-height: 0px;">
+        <thead>
+            <tr class="border-b border-defaultborder dark:border-defaultborder/10">
+                <th class="text-start" style="width: 10px; white-space: nowrap;">
+                    <input type="checkbox" class="form-check-input mx-3" id="selectAll">
+                </th>
+                <th scope="col" class="text-start" style="white-space: nowrap;">Name</th>
+                <th scope="col" class="text-start" style="white-space: nowrap;">Status</th>
+                <th scope="col" class="text-start" style="white-space: nowrap; color: #364051 !important;">Type</th>
+                <th scope="col" class="text-start" style="white-space: nowrap;">Company</th>
+                <th scope="col" class="text-start" style="white-space: nowrap;">Postion</th>
+                <th scope="col" class="text-start" style="white-space: nowrap;">Phone Number</th>
+                <th scope="col" class="text-start" style="white-space: nowrap;">Email Address</th>
+                <th scope="col" class="text-start" id="action_th" style="white-space: nowrap;">Actions</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+{{-- in your layout, ideally --}}
+@push('styles')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+@endpush
+
+@push('scripts')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{{-- Optional local fallback --}}
+<script>window.jQuery || document.write('<script src="/vendor/jquery-3.6.0.min.js"><\/script>')</script>
+
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!$.fn.DataTable) {
+      console.error('DataTables not found. jQuery version:', $.fn.jquery);
+      return;
+    }
+
+    $('#clientTable').DataTable({
+      processing: true,
+      serverSide: false,
+      ajax: {
+        url: "{{ route('sales.data') }}",
+        type: "POST",
+        data: { _token: "{{ csrf_token() }}" },
+        beforeSend: function () { $("#customLoader").show(); },
+        complete: function () { $("#customLoader").hide(); }
+      },
+      language: { search: "_INPUT_", searchPlaceholder: "Search here..." },
+      columns: [
+        { data: 'id', width: '10px', orderable: false,
+          render: data => `<input type="checkbox" class="rowCheckbox form-check-input mx-3" value="${data}">` },
+        { data: 'name', name: 'name', render: (data, type, row) => `
+          <div class="flex items-center gap-2">
+            <span class="avatar avatar-rounded avatar-sm border border-container !border-dark">
+              <img src="${row.photo}" alt="Profile Image" onerror="this.src='/user.png'">
+            </span>
+            <a data-bs-toggle="offcanvas" data-hs-overlay="#offcanvasExample">
+              <span class="block font-medium text-[14px]">${data}</span>
+            </a>
+          </div>` },
+        { data: 'status', name: 'status', render: (d, t, r) => `
+          <span class="bg-light badge" style="color:${r.status_color};font-size:13px">${d}</span>` },
+        { data: 'type', className: "text-start text-muted" },
+        { data: 'company', name: 'company', className: "text-start" },
+        { data: 'position', className: "text-start" },
+        { data: 'phone', name: 'phone', className: "text-start" },
+        { data: 'email', name: 'email', className: "text-start" },
+        { data: 'id', orderable: false, searchable: false,
+          render: (d, t, r) => `
+            <div class="hstack gap-1 text-[.9375rem]">
+              <center>
+                <div class="hs-tooltip ti-main-tooltip [--placement:left]">
+                  <a href="/sales/relationship/list/details/${r.id}" class="ti-btn ti-btn-sm bg-info/10">
+                    <i class="bi bi-eye text-info"></i>
+                    <span class="hs-tooltip-content ti-main-tooltip-content py-1 px-2 !bg-info !text-xs !font-medium !text-white shadow-sm dark:bg-slate-700 hidden" role="tooltip">View</span>
+                    View
+                  </a>
+                </div>
+              </center>
+            </div>` }
+      ],
+      order: [[2, "asc"]],
+      rowCallback: function (row, data) {
+        $(row).attr('data-href', `/sales/relationship/list/details/${data.id}`);
+      },
+      initComplete: function () {
+        $("#customSearchWrapper").html($("#clientTable_filter"));
+        $("#customLengthWrapper").html($("#clientTable_length"));
+      }
+    });
+  });
+</script>
+@endpush
+

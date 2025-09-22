@@ -1,0 +1,57 @@
+{
+    "id": "intermediate-clean",
+    "name": "Intermediate Clean",
+    "icon": "🧼",
+    "category": "Cleaning Services",
+    "description": "Mid-level cleaning phase focusing on detailed cleaning and preparation for final stages",
+    "template": {
+        "title": "Intermediate Clean - Detailed Cleaning Phase",
+        "description": "Second phase of cleaning focusing on detailed work, sanitization, and preparing surfaces for final finishing touches.",
+        "budget": 12000,
+        "duration_days": 10,
+        "tasks": [
+            {
+                "name": "Surface Sanitization",
+                "est_days": 2,
+                "dependsOn": [],
+                "notes": "Sanitize all surfaces, door handles, light switches, and high-touch areas"
+            },
+            {
+                "name": "Floor Deep Cleaning & Treatment",
+                "est_days": 2,
+                "dependsOn": ["Surface Sanitization"],
+                "notes": "Deep clean floors, apply treatments, prepare for final waxing/sealing"
+            },
+            {
+                "name": "Window Glass Cleaning",
+                "est_days": 2,
+                "dependsOn": ["Surface Sanitization"],
+                "notes": "Clean all window glass, mirrors, and glass surfaces for streak-free finish"
+            },
+            {
+                "name": "Fixture & Hardware Polishing",
+                "est_days": 1,
+                "dependsOn": ["Surface Sanitization"],
+                "notes": "Polish light fixtures, door hardware, faucets, and metal surfaces"
+            },
+            {
+                "name": "Carpet Spot Treatment",
+                "est_days": 1,
+                "dependsOn": ["Surface Sanitization"],
+                "notes": "Treat remaining stains, high-traffic areas, and prepare for final cleaning"
+            },
+            {
+                "name": "Air Vent & Filter Cleaning",
+                "est_days": 1,
+                "dependsOn": ["Surface Sanitization"],
+                "notes": "Clean air vents, replace filters, improve air quality"
+            },
+            {
+                "name": "Quality Check & Touch-ups",
+                "est_days": 1,
+                "dependsOn": ["Floor Deep Cleaning & Treatment", "Window Glass Cleaning", "Fixture & Hardware Polishing"],
+                "notes": "Inspect work quality, perform necessary touch-ups before final phase"
+            }
+        ]
+    }
+}

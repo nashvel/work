@@ -1,0 +1,51 @@
+{
+    "id": "final-clean",
+    "name": "Final Clean",
+    "icon": "✨",
+    "category": "Cleaning Services",
+    "description": "Comprehensive final cleaning phase with finishing touches and quality assurance",
+    "template": {
+        "title": "Final Clean - Finishing & Quality Assurance Phase",
+        "description": "Third phase focusing on final touches, protective coatings, and ensuring everything meets quality standards.",
+        "budget": 10000,
+        "duration_days": 8,
+        "tasks": [
+            {
+                "name": "Floor Waxing & Sealing",
+                "est_days": 2,
+                "dependsOn": [],
+                "notes": "Apply final wax coats, sealers, and protective finishes to all floor surfaces"
+            },
+            {
+                "name": "Carpet Final Cleaning & Protection",
+                "est_days": 2,
+                "dependsOn": [],
+                "notes": "Final carpet cleaning, stain protection application, and grooming"
+            },
+            {
+                "name": "Window Final Polish",
+                "est_days": 1,
+                "dependsOn": [],
+                "notes": "Final window polishing for crystal-clear, streak-free finish"
+            },
+            {
+                "name": "Restroom Final Sanitization",
+                "est_days": 1,
+                "dependsOn": [],
+                "notes": "Final disinfection, fixture polishing, and supply restocking"
+            },
+            {
+                "name": "Final Dusting & Polishing",
+                "est_days": 1,
+                "dependsOn": ["Floor Waxing & Sealing"],
+                "notes": "Final dust removal, furniture polishing, and surface finishing"
+            },
+            {
+                "name": "Quality Inspection & Documentation",
+                "est_days": 1,
+                "dependsOn": ["Carpet Final Cleaning & Protection", "Window Final Polish", "Restroom Final Sanitization", "Final Dusting & Polishing"],
+                "notes": "Comprehensive quality check, photo documentation, and completion report"
+            }
+        ]
+    }
+}
