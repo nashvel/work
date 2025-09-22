@@ -1,0 +1,81 @@
+{
+    "id": "office-construction",
+    "name": "Office Construction",
+    "icon": "🏗️",
+    "category": "Construction",
+    "description": "Commercial office space construction project",
+    "template": {
+        "title": "Office Space Construction Project",
+        "description": "Complete construction of modern office space including electrical, plumbing, HVAC, flooring, and finishing work.",
+        "budget": 150000,
+        "duration_days": 90,
+        "tasks": [
+            {
+                "name": "Project Planning & Permits",
+                "est_days": 10,
+                "dependsOn": [],
+                "notes": "Obtain building permits, finalize architectural plans, schedule inspections"
+            },
+            {
+                "name": "Site Preparation",
+                "est_days": 5,
+                "dependsOn": ["Project Planning & Permits"],
+                "notes": "Clear site, set up safety barriers, establish utilities access"
+            },
+            {
+                "name": "Foundation & Structural Work",
+                "est_days": 15,
+                "dependsOn": ["Site Preparation"],
+                "notes": "Pour foundation, install steel framework, structural reinforcements"
+            },
+            {
+                "name": "Electrical Rough-In",
+                "est_days": 8,
+                "dependsOn": ["Foundation & Structural Work"],
+                "notes": "Install electrical panels, run wiring, place outlet boxes"
+            },
+            {
+                "name": "Plumbing Rough-In",
+                "est_days": 6,
+                "dependsOn": ["Foundation & Structural Work"],
+                "notes": "Install water supply lines, drainage, fixtures rough-in"
+            },
+            {
+                "name": "HVAC Installation",
+                "est_days": 10,
+                "dependsOn": ["Electrical Rough-In", "Plumbing Rough-In"],
+                "notes": "Install ductwork, HVAC units, ventilation systems"
+            },
+            {
+                "name": "Drywall Installation",
+                "est_days": 8,
+                "dependsOn": ["HVAC Installation"],
+                "notes": "Hang drywall, tape and mud joints, sand smooth"
+            },
+            {
+                "name": "Flooring Installation",
+                "est_days": 10,
+                "dependsOn": ["Drywall Installation"],
+                "notes": "Install carpet, hardwood, tile flooring throughout"
+            },
+            {
+                "name": "Interior Painting",
+                "est_days": 7,
+                "dependsOn": ["Drywall Installation"],
+                "notes": "Prime and paint all interior walls, ceilings, trim"
+            },
+            {
+                "name": "Final Electrical & Plumbing",
+                "est_days": 5,
+                "dependsOn": ["Interior Painting", "Flooring Installation"],
+                "notes": "Install fixtures, outlets, switches, final plumbing connections"
+            },
+            {
+                "name": "Final Inspection & Cleanup",
+                "est_days": 3,
+                "dependsOn": ["Final Electrical & Plumbing"],
+                "notes": "Building inspection, punch list completion, final cleanup"
+            }
+        ]
+    }
+}

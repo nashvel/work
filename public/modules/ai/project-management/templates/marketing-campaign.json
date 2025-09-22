@@ -1,0 +1,87 @@
+{
+    "id": "marketing-campaign",
+    "name": "Marketing Campaign",
+    "icon": "📢",
+    "category": "Marketing",
+    "description": "Digital marketing campaign launch project",
+    "template": {
+        "title": "Digital Marketing Campaign Launch",
+        "description": "Comprehensive digital marketing campaign including strategy development, content creation, social media, advertising, and performance tracking.",
+        "budget": 25000,
+        "duration_days": 60,
+        "tasks": [
+            {
+                "name": "Market Research & Analysis",
+                "est_days": 7,
+                "dependsOn": [],
+                "notes": "Analyze target audience, competitors, market trends, customer personas"
+            },
+            {
+                "name": "Campaign Strategy Development",
+                "est_days": 5,
+                "dependsOn": ["Market Research & Analysis"],
+                "notes": "Define campaign objectives, messaging, channels, success metrics"
+            },
+            {
+                "name": "Content Strategy & Planning",
+                "est_days": 4,
+                "dependsOn": ["Campaign Strategy Development"],
+                "notes": "Create content calendar, plan blog posts, social media content, email campaigns"
+            },
+            {
+                "name": "Creative Asset Development",
+                "est_days": 10,
+                "dependsOn": ["Content Strategy & Planning"],
+                "notes": "Design graphics, videos, banners, landing pages, email templates"
+            },
+            {
+                "name": "Website Landing Page Creation",
+                "est_days": 8,
+                "dependsOn": ["Creative Asset Development"],
+                "notes": "Develop campaign-specific landing pages, forms, conversion tracking"
+            },
+            {
+                "name": "Social Media Setup",
+                "est_days": 3,
+                "dependsOn": ["Creative Asset Development"],
+                "notes": "Set up social media accounts, profiles, posting schedules"
+            },
+            {
+                "name": "Email Marketing Setup",
+                "est_days": 4,
+                "dependsOn": ["Creative Asset Development"],
+                "notes": "Create email templates, automation workflows, subscriber segments"
+            },
+            {
+                "name": "Paid Advertising Setup",
+                "est_days": 5,
+                "dependsOn": ["Website Landing Page Creation"],
+                "notes": "Create Google Ads, Facebook Ads, targeting, budget allocation"
+            },
+            {
+                "name": "SEO Optimization",
+                "est_days": 6,
+                "dependsOn": ["Website Landing Page Creation"],
+                "notes": "Keyword research, on-page SEO, meta tags, content optimization"
+            },
+            {
+                "name": "Campaign Launch",
+                "est_days": 2,
+                "dependsOn": ["Social Media Setup", "Email Marketing Setup", "Paid Advertising Setup", "SEO Optimization"],
+                "notes": "Go live with all campaign elements, monitor initial performance"
+            },
+            {
+                "name": "Performance Monitoring",
+                "est_days": 15,
+                "dependsOn": ["Campaign Launch"],
+                "notes": "Daily monitoring, analytics review, performance optimization"
+            },
+            {
+                "name": "Campaign Analysis & Reporting",
+                "est_days": 3,
+                "dependsOn": ["Performance Monitoring"],
+                "notes": "Compile results, ROI analysis, recommendations for future campaigns"
+            }
+        ]
+    }
+}

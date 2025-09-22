@@ -1,0 +1,87 @@
+{
+    "id": "event-planning",
+    "name": "Event Planning",
+    "icon": "🎉",
+    "category": "Events",
+    "description": "Corporate event planning and execution project",
+    "template": {
+        "title": "Corporate Event Planning & Execution",
+        "description": "Complete planning and execution of corporate event including venue booking, catering, entertainment, logistics, and post-event follow-up.",
+        "budget": 35000,
+        "duration_days": 45,
+        "tasks": [
+            {
+                "name": "Event Concept & Planning",
+                "est_days": 5,
+                "dependsOn": [],
+                "notes": "Define event objectives, theme, target audience, initial planning"
+            },
+            {
+                "name": "Budget Planning & Approval",
+                "est_days": 3,
+                "dependsOn": ["Event Concept & Planning"],
+                "notes": "Create detailed budget breakdown, get stakeholder approval"
+            },
+            {
+                "name": "Venue Research & Booking",
+                "est_days": 7,
+                "dependsOn": ["Budget Planning & Approval"],
+                "notes": "Research venues, site visits, contract negotiation, booking confirmation"
+            },
+            {
+                "name": "Vendor Selection & Contracts",
+                "est_days": 8,
+                "dependsOn": ["Budget Planning & Approval"],
+                "notes": "Select caterers, photographers, entertainment, AV equipment suppliers"
+            },
+            {
+                "name": "Marketing & Promotion",
+                "est_days": 10,
+                "dependsOn": ["Venue Research & Booking"],
+                "notes": "Create invitations, promotional materials, registration system, marketing campaign"
+            },
+            {
+                "name": "Registration Management",
+                "est_days": 15,
+                "dependsOn": ["Marketing & Promotion"],
+                "notes": "Process registrations, track RSVPs, manage guest list, send confirmations"
+            },
+            {
+                "name": "Catering & Menu Planning",
+                "est_days": 5,
+                "dependsOn": ["Vendor Selection & Contracts"],
+                "notes": "Menu selection, dietary requirements, final headcount, catering coordination"
+            },
+            {
+                "name": "Entertainment & Speakers",
+                "est_days": 6,
+                "dependsOn": ["Vendor Selection & Contracts"],
+                "notes": "Book keynote speakers, entertainment, rehearsals, technical requirements"
+            },
+            {
+                "name": "Logistics & Setup Planning",
+                "est_days": 4,
+                "dependsOn": ["Venue Research & Booking", "Catering & Menu Planning"],
+                "notes": "Create event timeline, setup schedule, staffing plan, equipment requirements"
+            },
+            {
+                "name": "Event Day Coordination",
+                "est_days": 1,
+                "dependsOn": ["Registration Management", "Entertainment & Speakers", "Logistics & Setup Planning"],
+                "notes": "On-site coordination, setup supervision, guest management, troubleshooting"
+            },
+            {
+                "name": "Event Breakdown & Cleanup",
+                "est_days": 1,
+                "dependsOn": ["Event Day Coordination"],
+                "notes": "Coordinate venue breakdown, equipment return, final cleanup"
+            },
+            {
+                "name": "Post-Event Follow-up",
+                "est_days": 3,
+                "dependsOn": ["Event Breakdown & Cleanup"],
+                "notes": "Send thank you notes, gather feedback, process final invoices, event report"
+            }
+        ]
+    }
+}
